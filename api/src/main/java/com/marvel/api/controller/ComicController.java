@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -24,7 +25,13 @@ public class ComicController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public ComicDTO findAll(@RequestParam(name = "heroId") int heroId) {
+    public ComicDTO findComicByHeroId(@RequestParam(name = "heroId") int heroId) {
         return service.findComicByHero(heroId);
+    }
+
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public void createComicByHeroId(@RequestParam(name = "heroId") int heroId) {
+        service.createComic(heroId);
     }
 }

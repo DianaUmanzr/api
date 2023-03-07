@@ -1,10 +1,10 @@
-package com.marvel.api.dto;
+package com.marvel.api.dto.response;
 
 import java.io.Serializable;
 import lombok.Data;
 
 @Data
-public class CharacterDTO implements Serializable {
+public class HeroDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String id;

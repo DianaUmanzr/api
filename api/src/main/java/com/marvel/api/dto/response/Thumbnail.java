@@ -1,17 +1,16 @@
-package com.marvel.api.dto;
+package com.marvel.api.dto.response;
 
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Builder
-@Setter
-@Getter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Thumbnail {
+public class Thumbnail implements Serializable {
     private String path;
     private String extension;
 
