@@ -21,16 +21,7 @@ h
 0src/main/java/com/marvel/api/entity/Creator.java,2/6/26eaca82d916c4139a451e0688286606c4c3633e
 ]
 -src/main/java/com/marvel/api/entity/Hero.java,3/5/35324a4ac7ef7901c3ee7be5fe07c7dae6fac2a7
-l
-<src/main/java/com/marvel/api/controller/ComicController.java,4/e/4e7306d7a4d55cac17189915154737a07d032093
 f
 6src/main/java/com/marvel/api/service/ComicService.java,3/b/3b39ddb46032f5a66ea262336040f0b5fd0ec3f0
 f
 6src/main/java/com/marvel/api/dto/response/HeroDTO.java,d/2/d2df9d46a17ec908740b3e5b1b2f11ffedabea47
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-j
-:src/main/java/com/marvel/api/service/ComicServiceImpl.java,0/8/08095aafb16fe2f331f75364b90ed422f71d0e5d
-i
-9src/main/java/com/marvel/api/entity/ComparableEntity.java,1/4/14f8e0fb2649d772a7f5bf6f245c037b0b4896c6

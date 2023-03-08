@@ -29,12 +29,4 @@ public class Story {
     @ManyToOne
     @JoinColumn(name = "comic_id", referencedColumnName = "comic_id", insertable = false, updatable = false)
     private Comic comic;
-
-   /* @ManyToOne
-    @JoinColumn(name = "hero_id", referencedColumnName = "hero_id", insertable = false, updatable = false)
-    private Hero heros;
-
-    @ManyToOne
-    @JoinColumn(name = "creator_id", referencedColumnName = "creator_id", insertable = false, updatable = false)
-    private Creator creators;*/
 }
