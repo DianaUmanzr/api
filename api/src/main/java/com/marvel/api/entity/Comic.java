@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,7 +22,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Comic implements Serializable {
+@EntityListeners(AuditListener.class)
+public class Comic implements Auditable, Serializable {
 
     @Id
     @GeneratedValue
@@ -31,6 +34,9 @@ public class Comic implements Serializable {
     private Long id;
 
     private String name;
+
+    @Embedded
+    private Audit audit;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "comic")
     public List<Serie> series = new ArrayList<>();
